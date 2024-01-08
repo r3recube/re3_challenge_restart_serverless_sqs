@@ -1,8 +1,8 @@
 # AWS Serverless Exercise - Lambda, SQS and DynamoDB
-This exercise involves setting up an AWS serverless environment where a Lambda function is triggered based on SQS queue messages. It includes creating an SQS queue, writing Python scripts for a message producer (running on your desktop) and a Lambda function (acting as a consumer), and configuring the Lambda function to process messages and save data to a DynamoDB table. 
+This exercise involves setting up an AWS serverless environment where a Lambda function is triggered based on SQS queue messages. It includes creating an SQS queue, writing Python scripts for a message producer (running on your desktop) and a Lambda function (acting as a consumer) that process messages and save data to a DynamoDB table. 
 
 ## Requirements
-This task tests AWS serverless service integration, Python scripting
+This task tests AWS serverless service integration and Python scripting
 
 - Candidates must successfully complete the mandatory tasks to progress in the hiring process, demonstrating fundamental AWS and Python skills essential for the role. 
 - Optional tasks are there for earning additional points, showing a deeper understanding and broader skill set. 
@@ -17,6 +17,8 @@ Essential tasks that test the core competencies required for the position. These
 4) Set up a DynamoDB table that can store the content of processed messages
 5) Create an AWS Lambda function to process messages from SQS and save data to the DynamoDB table.
 4) Include error handling and logging in the Lambda function.
+5) Create a CloudWatch dashboard to monitor Lambda executions and SQS message processing.
+
 
 #### Examples of JSON Messages
 ```
@@ -33,16 +35,14 @@ Essential tasks that test the core competencies required for the position. These
 ### Optional requirements
 Advanced tasks that offer the opportunity to demonstrate additional skills. These include configuring CloudWatch for monitoring and logging, creating a CloudWatch dashboard for better visibility of the infrastructure, and using infrastructure as code tools like CloudFormation or Terraform. These tasks are more complex and test the candidate's proficiency in monitoring, optimization, and modern cloud deployment practices.
 
-1) Use CloudWatch to monitor Lambda executions and SQS message processing.
-2) Create a CloudWatch dashboard to monitor SQS and Lambda function metrics.
-3) Implement dead-letter queues for handling processing failures.
+1) Implement dead-letter queues for handling processing failures.
+2) Implement AWS X-Ray for tracing and analyzing the behavior of the Lambda, SQS and DynamoDB.
 
 ### Bonus requirements
 This bonus requirement is aimed at candidates who are comfortable with DevOps practices and more advanced AWS functionalities.
 
 1) Use a Serverless [Framework](https://aws.amazon.com/it/serverless/getting-started/?serverless.sort-by=item.additionalFields.createdDate&serverless.sort-order=desc#Developer_tools) for infrastructure creation.
-2) Implement AWS X-Ray for tracing and analyzing the behavior of the Lambda, SQS and DynamoDB.
-3) Share CloudWatch dashboards and any advanced analytics.
+2) Share CloudWatch dashboards and any advanced analytics.
 
 ## Test Scale-Out/In Process
 - Use the Producer script to load messages into the SQS queue.
